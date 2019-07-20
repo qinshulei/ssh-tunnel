@@ -37,16 +37,16 @@ PATH=/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin
 
 # TODO read options from /etc/ssh-tunnel.conf
 
-PORT=3001
-HOST=cloud-server
-USER=jfathman
+PORT=3002
+HOST=oray.qinshulei.cn
+USER=temp
 
 NAME=ssh-tunnel
 #PIDDIR=/var/run/$NAME
 #PIDFILE=$PIDDIR/$NAME.pid
 PIDFILE=/var/run/$NAME.pid
 DAEMON=/usr/bin/autossh
-DAEMON_OPTS="-M 0 -N -R $PORT:localhost:22 -o ServerAliveInterval=60 -o ServerAliveCountMax=3 -i /home/$USER/.ssh/id_rsa $USER@$HOST"
+DAEMON_OPTS="-M 9998 -N -R $PORT:localhost:22 $USER@$HOST"
 
 if [ "$(id -u)" != "0" ]; then
   echo "Must run as root: $NAME"
