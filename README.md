@@ -70,6 +70,16 @@ tcp6       0      0 ip6-localhost:3002      [::]:*                  LISTEN
 alias bbb='ssh -p 3002 localhost'
 alias rpi='ssh -p 3001 localhost'
 ```
+#### Config ~/.ssh/config for Convenience
+
+```
+Host xxxx
+  Hostname localhost
+  Port 3001
+  User xx
+
+```
+
 #### Connect to Remote Devices from Cloud Server via SSH Reverse Tunnel:
 ```
 [jfathman@cloud ~]$ bbb
